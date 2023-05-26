@@ -6766,9 +6766,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   father: {fileID: 1862743150}
   Dot: {fileID: 363165208638262572, guid: 197f4d3383197664790eaa9c4a7701ae, type: 3}
-  inputField: {fileID: 1786445384}
-  X: {fileID: 1365217757}
-  text: {fileID: 1936170979}
+  serializableDict:
+    data:
+    - key: inputFieldRormula
+      value: {fileID: 1786445384}
+    - key: inputFieldXValue
+      value: {fileID: 1365217757}
 --- !u!1 &1345349167
 GameObject:
   m_ObjectHideFlags: 0
