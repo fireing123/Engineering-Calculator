@@ -359,8 +359,6 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEditor.UI.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.TestRunner.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
--analyzer:"Assets/Lib/Antlr3.Runtime.dll"
--analyzer:"Assets/Lib/NCalc.dll"
 "Library/PackageCache/com.unity.2d.psdimporter@6.0.7/Editor/Analytics.cs"
 "Library/PackageCache/com.unity.2d.psdimporter@6.0.7/Editor/AssemblyInfo.cs"
 "Library/PackageCache/com.unity.2d.psdimporter@6.0.7/Editor/ImportUtilites.cs"

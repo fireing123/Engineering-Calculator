@@ -350,8 +350,6 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/Unity.Mathematics.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEditor.UI.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
--analyzer:"Assets/Lib/Antlr3.Runtime.dll"
--analyzer:"Assets/Lib/NCalc.dll"
 "Library/PackageCache/com.unity.2d.animation@7.0.10/Runtime/AssemblyInfo.cs"
 "Library/PackageCache/com.unity.2d.animation@7.0.10/Runtime/Bone.cs"
 "Library/PackageCache/com.unity.2d.animation@7.0.10/Runtime/BufferManager.cs"

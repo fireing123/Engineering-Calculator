@@ -349,8 +349,6 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/Unity.Services.Core.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEditor.UI.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
--analyzer:"Assets/Lib/Antlr3.Runtime.dll"
--analyzer:"Assets/Lib/NCalc.dll"
 "Library/PackageCache/com.unity.purchasing@4.7.0/Runtime/Purchasing/Analytics/AnalyticsAdapter.cs"
 "Library/PackageCache/com.unity.purchasing@4.7.0/Runtime/Purchasing/Analytics/AnalyticsClient.cs"
 "Library/PackageCache/com.unity.purchasing@4.7.0/Runtime/Purchasing/Analytics/EmptyUnityAnalyticsAdapter.cs"

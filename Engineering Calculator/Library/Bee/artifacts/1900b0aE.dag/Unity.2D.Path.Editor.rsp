@@ -349,8 +349,6 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEditor.UI.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.TestRunner.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
--analyzer:"Assets/Lib/Antlr3.Runtime.dll"
--analyzer:"Assets/Lib/NCalc.dll"
 "Library/PackageCache/com.unity.2d.path@5.0.2/Editor/EditablePath/BezierUtility.cs"
 "Library/PackageCache/com.unity.2d.path@5.0.2/Editor/EditablePath/ControlPoint.cs"
 "Library/PackageCache/com.unity.2d.path@5.0.2/Editor/EditablePath/EditablePath.cs"

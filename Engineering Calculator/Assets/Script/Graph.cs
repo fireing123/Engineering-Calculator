@@ -165,6 +165,4 @@ public class Graph : MonoBehaviour
         public T value;
     }
 
-    
-
 }

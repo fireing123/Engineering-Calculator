@@ -345,8 +345,6 @@
 -r:"C:/Users/gimd8/source/repos/Engineering-Calculator/Engineering Calculator/Library/PackageCache/com.unity.nuget.newtonsoft-json@3.1.0/Runtime/Newtonsoft.Json.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEditor.UI.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
--analyzer:"Assets/Lib/Antlr3.Runtime.dll"
--analyzer:"Assets/Lib/NCalc.dll"
 "Library/PackageCache/com.unity.analytics@3.6.12/DataPrivacy/AssemblyInfo.cs"
 "Library/PackageCache/com.unity.analytics@3.6.12/DataPrivacy/DataPrivacy.cs"
 "Library/PackageCache/com.unity.analytics@3.6.12/DataPrivacy/DataPrivacyButton.cs"

@@ -357,8 +357,6 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEditor.UI.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.TestRunner.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
--analyzer:"Assets/Lib/Antlr3.Runtime.dll"
--analyzer:"Assets/Lib/NCalc.dll"
 "Library/PackageCache/com.unity.services.mediation@1.0.5/Editor/Build/AssemblyInfo.cs"
 "Library/PackageCache/com.unity.services.mediation@1.0.5/Editor/Build/FileContentAppender.cs"
 "Library/PackageCache/com.unity.services.mediation@1.0.5/Editor/Build/LockFileChecksumUtils.cs"

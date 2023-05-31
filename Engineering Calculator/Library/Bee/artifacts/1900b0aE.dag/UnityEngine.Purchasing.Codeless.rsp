@@ -348,8 +348,6 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.Purchasing.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.Purchasing.Stores.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
--analyzer:"Assets/Lib/Antlr3.Runtime.dll"
--analyzer:"Assets/Lib/NCalc.dll"
 "Library/PackageCache/com.unity.purchasing@4.7.0/Runtime/Codeless/AssemblyInfo.cs"
 "Library/PackageCache/com.unity.purchasing@4.7.0/Runtime/Codeless/CodelessIAPStoreListener.cs"
 "Library/PackageCache/com.unity.purchasing@4.7.0/Runtime/Codeless/ComboBox.cs"
