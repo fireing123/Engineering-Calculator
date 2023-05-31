@@ -113,11 +113,11 @@
 -define:TEXTCORE_FONT_ENGINE_1_5_OR_NEWER
 -define:CSHARP_7_OR_LATER
 -define:CSHARP_7_3_OR_NEWER
--r:"Assets/Antlr3.Runtime.dll"
+-r:"Assets/Lib/Antlr3.Runtime.dll"
+-r:"Assets/Lib/NCalc.dll"
 -r:"Assets/MobileDependencyResolver/Editor/Google.JarResolver.dll"
 -r:"Assets/MobileDependencyResolver/Editor/Google.VersionHandler.dll"
 -r:"Assets/MobileDependencyResolver/Editor/Google.VersionHandlerImpl.dll"
--r:"Assets/NCalc.dll"
 -r:"C:/Program Files/Unity/Hub/Editor/2021.3.23f1/Editor/Data/Managed/UnityEditor.Graphs.dll"
 -r:"C:/Program Files/Unity/Hub/Editor/2021.3.23f1/Editor/Data/Managed/UnityEngine/UnityEditor.CoreModule.dll"
 -r:"C:/Program Files/Unity/Hub/Editor/2021.3.23f1/Editor/Data/Managed/UnityEngine/UnityEditor.DeviceSimulatorModule.dll"
@@ -353,6 +353,8 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEditor.UI.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.TestRunner.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
+-analyzer:"Assets/Lib/Antlr3.Runtime.dll"
+-analyzer:"Assets/Lib/NCalc.dll"
 "Library/PackageCache/com.unity.2d.common@6.0.6/Editor/AssemblyInfo.cs"
 "Library/PackageCache/com.unity.2d.common@6.0.6/Editor/ImagePacker/ImagePacker.cs"
 "Library/PackageCache/com.unity.2d.common@6.0.6/Editor/ImagePacker/ImagePackerDebugEditor.cs"

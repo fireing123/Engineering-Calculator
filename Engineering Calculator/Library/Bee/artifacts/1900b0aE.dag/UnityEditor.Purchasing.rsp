@@ -339,6 +339,8 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.Purchasing.Stores.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.TestRunner.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
+-analyzer:"Assets/Lib/Antlr3.Runtime.dll"
+-analyzer:"Assets/Lib/NCalc.dll"
 "Library/PackageCache/com.unity.purchasing@4.7.0/Editor/Analytics/Entity/EventActions.cs"
 "Library/PackageCache/com.unity.purchasing@4.7.0/Editor/Analytics/Entity/EventComponents.cs"
 "Library/PackageCache/com.unity.purchasing@4.7.0/Editor/Analytics/Entity/EventSourceMenuItems.cs"
