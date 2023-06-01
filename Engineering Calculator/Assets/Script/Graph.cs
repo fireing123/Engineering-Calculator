@@ -11,8 +11,12 @@ public class Graph : MonoBehaviour
 {
     public GameObject father;
     public GameObject Dot;
+    public TMP_Text TMP_Text;
+    
     public SerializableDict<TMP_InputField> serializableDict;
     Dictionary<string, TMP_InputField> inputFields;
+
+    public TMP_Text ErrorText;
     void Awake()
     {
         inputFields = serializableDict.getDict();
@@ -40,14 +44,18 @@ public class Graph : MonoBehaviour
     {
         try
         {
-            var _InputField= inputFields[inputFieldFormula];
-            Expression exp = new Expression(_InputField.text);
+            var inputField = inputFields[inputFieldFormula];
             var xValue = inputFields[inputFieldXValue].text;
-            exp.Parameters["x"] = xValue;
-            _InputField.text = exp.Evaluate().ToString();
+            
+            object obj = NCalcu(inputField.text, ToDouble(xValue));
+            string result = obj.ToString();
+            TMP_Text.text = "result : ===\n" +
+                                 result +
+                                " \n=========";
+            
         } catch (Exception e)
         {
-            Debug.Log(e);
+            ErrorText.text = e.ToString();
         }
     }
 
@@ -56,13 +64,10 @@ public class Graph : MonoBehaviour
     /// </summary>
     public void PushButton()
     {
-        DeleteChild(father.transform);
         try
         {
-            var inputField = inputFields[inputFieldFormula];
-            var condition = inputFields[inputFieldCondition];
-            Debug.Log(condition.text);
-            DrawGraph(inputField.text, Dot, condition.text);
+            string cal = inputFields[inputFieldFormula].text;
+            DrawGraph(cal, Dot);
         } catch (Exception e)
         {
             Debug.Log(e);
@@ -74,22 +79,29 @@ public class Graph : MonoBehaviour
     /// </summary>
     /// <param name="str"></param>
     /// <exception cref="Exception"></exception>
-    public void DrawGraph(string str, GameObject Dot, string cond)
+    public void DrawGraph(string str, GameObject Dot)
     {
 
         if (str.IndexOf('^') != -1) throw new Exception("지원되지않는 연산자");
-        for (double i = -10; CheckCondition(cond ,i); i += 0.001f)
+        for (double i = -10; i<10.0f; i += 0.001f)
         {
             double result = Calculate(str, i);
+            Debug.Log(result);
             if (HasValue(result))
             {
-                GameObject DotObject = CreateGameObect(Dot);
-                Vector3 DotPosition = setPositon(i, result);
-                DotObject.transform.position = DotPosition;
+                CreateGraphDot(Dot, i, result);
             }
         }
     }
     
+    public void CreateGraphDot(GameObject Dot, double x, double y)
+    {
+        GameObject DotObject = CreateGameObect(Dot);
+        Vector3 DotPosition = setPositon(x, y);
+        DotObject.transform.parent = father.transform;
+        DotObject.transform.position = DotPosition;
+    }
+
     /// <summary>
     /// x , y 로 벡터값만듬
     /// </summary>
@@ -123,6 +135,12 @@ public class Graph : MonoBehaviour
     public void DeleteInputText()
     {
         foreach (var inputField in inputFields.Values) inputField.text = string.Empty;
+    }
+
+    public void DeleteResult()
+    {
+        TMP_Text.text = string.Empty;
+        ErrorText.text = string.Empty;
     }
 
     /// <summary>

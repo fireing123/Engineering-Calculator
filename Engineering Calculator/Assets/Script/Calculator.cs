@@ -1,5 +1,6 @@
 using NCalc;
 using System;
+using UnityEngine;
 
 namespace GraphMake
 {
@@ -8,15 +9,21 @@ namespace GraphMake
 
         public static double Calculate(string str, double Xvalue)
         {
-            Expression expression = new(str);
-            expression.Parameters["x"] = Xvalue;
-            string result = expression.Evaluate().ToString();
+            object Eval = NCalcu(str, Xvalue);
+            string result = Eval.ToString();
             return ToDouble(result);
+        }
+
+        public static object NCalcu(string str, double Xvalue)
+        {
+            Expression expression = new Expression(str);
+            expression.Parameters["x"] = Xvalue;
+            return expression.Evaluate();
         }
 
         public static bool HasValue(double value)
         {
-            return !(double.IsNaN(value) && double.IsInfinity(value));
+            return !(double.IsNaN(value) || double.IsInfinity(value));
         }
 
         public static double ToDouble(string str)
@@ -24,20 +31,13 @@ namespace GraphMake
             return Convert.ToDouble(str);
         }
 
-        public static bool CheckCondition(string str, double x) 
-        {
-            Expression expression = new(str);
-            expression.Parameters["x"] = x;
 
-            object result = expression.Evaluate();
-            return Convert.ToBoolean(result);
-        }
+
     }
 
     public static class InputFieldType
     {
-        public static string inputFieldFormula = "inputFieldRormula";
+        public static string inputFieldFormula = "inputFieldFormula";
         public static string inputFieldXValue = "inputFieldXValue";
-        public static string inputFieldCondition = "inputFieldCondition";
     }
 }
