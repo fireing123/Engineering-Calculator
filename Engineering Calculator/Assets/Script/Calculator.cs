@@ -11,7 +11,7 @@ namespace GraphMake
             Expression expression = new(str);
             expression.Parameters["x"] = Xvalue;
             string result = expression.Evaluate().ToString();
-            return toDouble(result);
+            return ToDouble(result);
         }
 
         public static bool HasValue(double value)
@@ -19,9 +19,18 @@ namespace GraphMake
             return !(double.IsNaN(value) && double.IsInfinity(value));
         }
 
-        public static double toDouble(string str)
+        public static double ToDouble(string str)
         {
             return Convert.ToDouble(str);
+        }
+
+        public static bool CheckCondition(string str, double x) 
+        {
+            Expression expression = new(str);
+            expression.Parameters["x"] = x;
+
+            object result = expression.Evaluate();
+            return Convert.ToBoolean(result);
         }
     }
 
@@ -29,5 +38,6 @@ namespace GraphMake
     {
         public static string inputFieldFormula = "inputFieldRormula";
         public static string inputFieldXValue = "inputFieldXValue";
+        public static string inputFieldCondition = "inputFieldCondition";
     }
 }

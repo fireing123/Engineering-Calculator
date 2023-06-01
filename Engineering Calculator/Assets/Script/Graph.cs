@@ -60,7 +60,9 @@ public class Graph : MonoBehaviour
         try
         {
             var inputField = inputFields[inputFieldFormula];
-            DrawGraph(inputField.text, Dot);
+            var condition = inputFields[inputFieldCondition];
+            Debug.Log(condition.text);
+            DrawGraph(inputField.text, Dot, condition.text);
         } catch (Exception e)
         {
             Debug.Log(e);
@@ -72,11 +74,11 @@ public class Graph : MonoBehaviour
     /// </summary>
     /// <param name="str"></param>
     /// <exception cref="Exception"></exception>
-    public void DrawGraph(string str, GameObject Dot)
+    public void DrawGraph(string str, GameObject Dot, string cond)
     {
 
         if (str.IndexOf('^') != -1) throw new Exception("지원되지않는 연산자");
-        for (double i = -10; i < 10; i += 0.001f)
+        for (double i = -10; CheckCondition(cond ,i); i += 0.001f)
         {
             double result = Calculate(str, i);
             if (HasValue(result))
